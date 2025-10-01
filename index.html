@@ -3,72 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table Header</title>
+    <title>Fashion Store - Your Style Destination</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <table border="2" >
-        <caption><b>IT Year 2 Timetable</b></caption>
-        <tr>
-            <th style="background-color: chartreuse;">Day</th>
-            <th style="background-color: chartreuse;">Time</th>
-            <th style="background-color: chartreuse;">Unit</th>
-            <th style="background-color: chartreuse;">Venue</th>
-        </tr>
-        <tr>
-            <th>Monday</th>
-            <td>12:30-2:30</td>
-            <td>CIR 205</td>
-            <td>Lab 5</td>
-        </tr>
-        <tr>
-            <th rowspan="2">Tuesday</th>
-            <td>9:00-12:00</td>
-            <td>CIT 209</td>
-            <td>Tb 3</td>
-            <tr colspan="2">
-            
-            <td>2:00-5:00</td>
-            <td>MMA 102 (Calculus)</td>
-            <td>Amph 1</td>
-        </tr></tr>
-        <tr >
-            <th rowspan="2">Wednesday</th>
-            <td>8:00-11:00</td>
-            <td>CIT 211</td>
-            <td>NL 13</td>
-            <tr colspan="2">
-               
-                <td>2:00-5:00</td>
-                <td>CIT 221(Lab Work)</td>
-                <td>Lab 3</td>
-            </tr>
-        </tr>
-        <tr >
-            <th rowspan="2">Thursday</th>
-            <td>9:00-12:00</td>
-            <td>CIM 207</td>
-            <td>NL 10</td>
-            <tr>
+
+    <header>
+        <h1>Fashion Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop Styles</a></li>
+                <li><a href="#sales">Upcoming Sales</a></li>
+                <li><a href="#benefits">Why Shop With Us?</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="shop" class="product-showcase">
+            <h2>Our Latest Styles</h2>
+            <div class="product-grid">
+                <article class="product-card">
+                    <img src="Summer Floral Dress.avif" alt="Summer Floral Dress" height="120px" width="120px">
+                    <h3>Summer Floral Dress</h3>
+                    <p class="price">ksh 1459.00</p>
+                    <button>Add to Cart</button>
+                </article>
                 
-                <td>2:00-5:00</td>
-                <td>CIR 201</td>
-                <td>NL 17</td>
-            </tr>
-        </tr>
-        <tr >
-            <th rowspan="2">Friday</th>
-            <td scope="row">7:00-9:00</td>
-            <td>CIR 203</td>
-            <td>TB 2</td>
-            <tr>
+                <article class="product-card">
+                    <img src="Classic Denim Jacket.webp" alt="Classic Denim Jacket" height="120px" width="120px" >
+                    <h3>Classic Denim Jacket</h3>
+                    <p class="price">ksh 1799.99</p>
+                    <button>Add to Cart</button>
+                </article>
                 
-             
-                <td>9:00-12:00</td>
-                <td>CIS 221</td>
-                <td>Lab 5</td>
-            </tr>
-        </tr>
-    </table>
-    <a href="registrationForm.html">registration form</a>
+                <article class="product-card">
+                    <img src="Leather Ankle Boots.jpg" alt="Leather Ankle Boots" height="120px" width="120px">
+                    <h3>Leather Ankle Boots</h3>
+                    <p class="price">ksh 5699.00</p>
+                    <button>Add to Cart</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="sales" class="sale-offers">
+            <h2>📢 Upcoming Sales</h2>
+            <p>Get ready for huge savings! Mark your calendars for these exciting offers:</p>
+            <ul>
+                <li>**Mid-Season Clearance:** Up to 50% off select items starting **October 15th!**</li>
+                <li>**Back-to-School Event:** 20% off all bags and footwear for a limited time.</li>
+                <li>**New Customer Discount:** Use code **NEW2025** for 15% off your first purchase.</li>
+            </ul>
+            <a href="#" class="cta-button">View All Deals</a>
+        </section>
+
+        <section id="benefits" class="benefits-section">
+            <h2 style="border: aliceblue; border-color: black;">Why Choose Fashion Store?</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Benefit</th>
+                        <th>Description</th>
+                        <th>Impact on Client</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>**Quality Assurance**</td>
+                        <td>Every item is hand-inspected for material integrity and durability.</td>
+                        <td>**Long-lasting value** and confidence in your purchase.</td>
+                    </tr>
+                    <tr>
+                        <td>**Eco-Friendly Sourcing**</td>
+                        <td>We partner with suppliers committed to sustainable practices.</td>
+                        <td>Shop with a **clear conscience**, supporting ethical fashion.</td>
+                    </tr>
+                    <tr>
+                        <td>**30-Day Free Returns**</td>
+                        <td>Hassle-free returns on all non-final sale items.</td>
+                        <td>**Zero risk** shopping experience.</td>
+                    </tr>
+                    <tr>
+                        <td>**Personal Stylist Support**</td>
+                        <td>Access to expert fashion advice via live chat.</td>
+                        <td>Get **perfectly tailored recommendations** for your body and style.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Fashion Store. All rights reserved. | Shop the latest shoes and imported accessories in Kenya.</p>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
